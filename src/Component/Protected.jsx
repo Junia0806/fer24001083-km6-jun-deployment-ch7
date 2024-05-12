@@ -12,7 +12,7 @@ function Protected({ children }) {
 
   useEffect(() => {
     if (!token) {
-      // alert("Anda tidak bisa mengakses halaman ini tanpa akun MyRecipe!");
+      alert("Anda tidak bisa mengakses halaman ini tanpa akun MyRecipe!");
       return navigate("/");
     }
 
