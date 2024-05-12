@@ -15,8 +15,7 @@ function MealDetail() {
   console.log("idMeal :>> ", idMeal);
   console.log("idMeal.idMeal :>> ", idMeal.idMeal);
   console.log("MealDetail :>> ", mealDetail);
-  
-  
+
   useEffect(() => {
     dispatch(fetchMealDetail(idMeal.idMeal));
   }, [dispatch, idMeal.idMeal]);
@@ -65,6 +64,13 @@ function MealDetail() {
                 <h2 className="font-bold text-4xl mb-4 mt-5 underline italic">
                   {mealDetail.strMeal}
                 </h2>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=6287754434901&text=Hello%20Chef!%20I%27m%20interested%20in%20trying%20this%20recipe.%20Can%20I%20ask%20more%20for%20this%20recipe%20%3A%20%0Ahttps%3A%2F%2Fapp-myrecipe.vercel.app%2Fdetail%2F${idMeal.idMeal}`}
+                  className="block text-center bg-gray-900 text-white py-2 px-4 rounded-md hover:bg-gray-400 hover:text-black focus:outline-none w-44"
+                >
+                  Ask This Recipe <i className="fab fa-whatsapp ml-2"></i>
+                </a>
+
                 <h3 className=" font-semibold text-xl mb-2">
                   Category Meal is {mealDetail.strCategory}
                 </h3>
